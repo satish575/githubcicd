@@ -14,7 +14,10 @@ jobs:
       uses: actions/checkout@v3
     - name: SSH to the remote server
       run: |
-        ssh -i ~/.ssh/id_gitcicd satish@192.168.1.71
+        ssh -i ~/.ssh/id_gitcicd satish@192.168.1.71 >> 'EOF'
+        sudo apt update
+        sudo apt install nginx
+        EOF
     - name: Update APT and Install Nginx
       run: |
         sudo apt update
