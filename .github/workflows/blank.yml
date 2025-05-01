@@ -12,7 +12,9 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-
+    - name: SSH to the remote server
+      run: |
+        ssh -i ~/.ssh/id_gitcicd satish@123.345.64.34
     - name: Update APT and Install Nginx
       run: |
         sudo apt update
