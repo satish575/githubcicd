@@ -29,4 +29,5 @@ jobs:
     - name: Test Nginx is Running
       run: curl -I http://localhost
 
- 
+   - name: Testing echo
+     run: echo "hello world" > README.md 
