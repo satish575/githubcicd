@@ -15,9 +15,6 @@ jobs:
     - name: SSH to the remote server
       run: |
         ssh -tt -i ~/.ssh/id_gitcicd satish@192.168.1.71 "mkdir newdownload"
-        sudo apt update
-        sudo apt install nginx
-        EOF
     - name: Update APT and Install Nginx
       run: |
         sudo apt update
